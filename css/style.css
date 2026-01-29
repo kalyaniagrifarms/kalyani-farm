@@ -61,7 +61,7 @@ display: block;
 
 .hero {
 background: url('../images/farm/hero.jpg') center/cover;
-height: 80px;
+height: 80vh;
 display: flex;
 align-items: center;
 justify-content: center;
