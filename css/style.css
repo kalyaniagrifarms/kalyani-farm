@@ -145,13 +145,12 @@ footer {
 background: #2f5d3a;
 color: white;
 text-align: center;
+align-items: center;
 padding: 30px;
 }
 
 .footer-logo {
 height: 50px;
-justify-content: center; 
-align-items: center; 
 }
 
 /*product page specific starts here*/
