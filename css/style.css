@@ -246,6 +246,61 @@ color: #444;
 }
 
 /* =====================
+Gallery
+===================== */
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 15px;
+}
+
+.gallery-grid img {
+width: 100%;
+border: 3px solid #f7f1e3;
+}
+
+/* =====================
+Pre-order
+===================== */
+.preorder-banner {
+background: #d8a31a;
+color: #2b2b2b;
+text-align: center;
+padding: 12px;
+font-weight: 600;
+}
+
+.preorder-banner .mr {
+display: block;
+font-size: 85%;
+}
+
+/* =====================
+Calendar
+===================== */
+.calendar {
+width: 100%;
+border-collapse: collapse;
+}
+
+.calendar th, .calendar td {
+border: 1px solid #ddd;
+padding: 10px;
+}
+
+.calendar th {
+background: #f0e6c8;
+}
+
+/* =====================
+Map
+===================== */
+.map-container {
+margin-top: 20px;
+border: 2px solid #d8a31a;
+}
+
+/* =====================
 MOBILE NAVIGATION
 ===================== */
 @media (max-width: 768px) {
