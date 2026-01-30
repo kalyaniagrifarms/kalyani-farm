@@ -36,7 +36,7 @@ justify-content: space-between;
 
 .logo {
 height: auto;
-max-height:90px;
+max-height:100px;
 max-width:160px;
 }
 
@@ -158,6 +158,7 @@ padding: 30px;
 
 .footer-logo {
 height: 50px;
+align:center;
 }
 
 .product-grid {
