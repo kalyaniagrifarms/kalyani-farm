@@ -1,3 +1,10 @@
+/* =====================
+GLOBAL RESET & BASE
+===================== */
+* {
+box-sizing: border-box;
+}
+
 body {
 margin: 0;
 font-family: 'Poppins', sans-serif;
@@ -5,37 +12,54 @@ background: #f7f1e3;
 color: #2b2b2b;
 }
 
+img {
+max-width: 100%;
+height: auto;
+display: block;
+}
+
+/* =====================
+LAYOUT
+===================== */
 .container {
-max-width:1200px;
+max-width: 1200px;
 width: 100%;
 margin: auto;
-padding:0 16px;
+padding: 0 16px;
 }
 
 header {
 background: white;
 border-bottom: 2px solid #d8a31a;
-position:sticky;
-top:0;
-z-index:1000;
-box-shadow:0 2px 8px rgba(0,0,0,0,05);
+position: sticky;
+top: 0;
+z-index: 1000;
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
+
 .nav {
 display: flex;
 align-items: center;
 justify-content: space-between;
 }
 
+/* =====================
+LOGO
+===================== */
 .logo {
-height: auto;
-max-height:100px;
-max-width:160px;
+max-height: 100px;
+max-width: 160px;
 }
 
+/* =====================
+NAVIGATION (DESKTOP)
+===================== */
 nav ul {
 list-style: none;
 display: flex;
 gap: 20px;
+margin: 0;
+padding: 0;
 }
 
 nav ul li {
@@ -54,6 +78,7 @@ display: block;
 font-weight: normal;
 }
 
+/* Dropdown */
 .dropdown-menu {
 display: none;
 position: absolute;
@@ -66,35 +91,55 @@ border: 1px solid #ccc;
 display: block;
 }
 
+/* =====================
+HAMBURGER BUTTON
+===================== */
+.menu-toggle {
+display: none;
+font-size: 28px;
+background: none;
+border: none;
+color: #2f5d3a;
+cursor: pointer;
+}
+
+/* =====================
+HERO
+===================== */
 .hero {
-background: url('../images/farm/hero.jpg') center/cover;
+background: url('../images/farm/hero.jpg') center / cover;
 min-height: 70vh;
 display: flex;
 align-items: center;
 justify-content: center;
-padding:40px 16px;
-text-align:center;
+padding: 40px 16px;
+text-align: center;
 }
 
 .hero-text {
 background: rgba(255,255,255,0.85);
 padding: 40px;
-max-width:600px;
-text-align: center;
+max-width: 600px;
 }
 
+/* =====================
+TYPOGRAPHY
+===================== */
 h1, h2, h3 {
 font-family: 'Playfair Display', serif;
 color: #2f5d3a;
 }
-h1{
-font-size:clamp(32px,5vw,56px);
+
+h1 {
+font-size: clamp(32px, 5vw, 56px);
 }
-h2{
-font-size:clamp(24px,4vw,36px);
+
+h2 {
+font-size: clamp(24px, 4vw, 36px);
 }
-.subtitle{
-  font-size:clamp(16px,3vw,20px);
+
+.subtitle {
+font-size: clamp(16px, 3vw, 20px);
 }
 
 .mr {
@@ -102,22 +147,27 @@ font-family: 'Noto Sans Devanagari', sans-serif;
 font-size: 90%;
 }
 
+/* =====================
+SECTIONS
+===================== */
 .section {
 padding: 40px 16px;
-text-align:center;
+text-align: center;
 }
 
-@media(min-width:768px){
-  .section{
-    padding:60px 40px;
-  }
-  
+@media (min-width: 768px) {
+.section {
+padding: 60px 40px;
+}
 }
 
 .bg-light {
 background: #fff;
 }
 
+/* =====================
+BUTTONS
+===================== */
 .btn, .btn-outline {
 display: inline-block;
 margin-top: 20px;
@@ -135,25 +185,35 @@ border: 2px solid #2f5d3a;
 color: #2f5d3a;
 }
 
-img{
-max-width:100%;
-height:auto;
-display:block;
+.btn-small {
+display: inline-block;
+margin-top: 12px;
+padding: 8px 18px;
+background: #2f5d3a;
+color: #fff;
+text-decoration: none;
+border-radius: 4px;
+font-size: 14px;
 }
 
+/* =====================
+FOOTER
+===================== */
 footer {
 background: #2f5d3a;
 color: white;
 text-align: center;
-align-items: center;
 padding: 30px;
 }
 
 .footer-logo {
 height: 50px;
+margin: 0 auto 10px;
 }
 
-/*product page specific starts here*/
+/* =====================
+PRODUCTS
+===================== */
 .product-grid {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -174,12 +234,10 @@ transform: translateY(-4px);
 box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-.product-card img {
-width: 100%;
-height: auto;
+.eco {
+font-size: 14px;
+color: #2f5d3a;
 }
-/*product page specific ends here*/
-
 
 .mr-title {
 font-family: 'Noto Sans Devanagari', sans-serif;
@@ -187,174 +245,51 @@ font-size: 90%;
 color: #444;
 }
 
-.eco {
-font-size: 14px;
-color: #2f5d3a;
-}
-
-.blog-card {
-background: #fff;
-padding: 25px;
-margin-bottom: 30px;
-border-left: 5px solid #d8a31a;
-}
-
-/* MOBILE RESPONSIVE */
+/* =====================
+MOBILE NAVIGATION
+===================== */
 @media (max-width: 768px) {
-    
-    .nav{
-    flex-direction:column;
-    align-items:center;
-    } 
-      
-    nav ul {
-    flex-direction: column;
-    background: white;
-    padding: 15px;
-    }
-      
-    nav ul {
-    width: 100%;
-    align-items:center;
-    }
-      
-    nav ul li{
-    width:100%;
-    text-align:center;
-    }
-    
-    .dropdown-menu{
-     position:static;
-     border:none;
-     padding:5px 0;
-    }  
-    .hero {
-    height: auto;
-    padding: 40px 0;
-    }
-    .hero-text {
-    padding: 20px;
-    }
-      
-    .section {
-    padding: 40px 6%;
-    }
-    
-    .logo {
-    height: 50px;
-    }
-    
-    .product-grid {
-    grid-template-columns: 1fr;
-    }
+
+.nav {
+flex-direction: column;
+align-items: center;
+
+position: relative;
 }
 
-.map-container {
-margin-top: 20px;
-border: 2px solid #d8a31a;
-}
-.gallery-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 15px;
-}
-
-.gallery-grid img {
-width: 100%;
-border: 3px solid #f7f1e3;
-}
-.preorder-banner {
-background: #d8a31a;
-color: #2b2b2b;
-text-align: center;
-padding: 12px;
-font-weight: 600;
-}
-
-.preorder-banner .mr {
+.menu-toggle {
 display: block;
-font-size: 85%;
+position: absolute;
+right: 16px;
+top: 24px;
 }
 
-.calendar {
+nav ul {
+display: none;
+flex-direction: column;
 width: 100%;
-border-collapse: collapse;
+background: white;
+margin-top: 16px;
+padding: 10px 0;
 }
 
-.calendar th, .calendar td {
-border: 1px solid #ddd;
-padding: 10px;
+nav ul.show {
+display: flex;
 }
 
-.calendar th {
-background: #f0e6c8;
+nav ul li {
+text-align: center;
+padding: 6px 0;
 }
 
-/*HAMBURGER BUTTON and menu starts here*/
-.menu-toggle{
-  display:none;
-  font-size:28px;
-  background:none;
-  border:none;
-  color:#2f5d3a;
-  cursor:pointer;
-}
-/*MOBILE NAV*/
-@media (max-width:768px){
- 
- .nav{
-   flex-direction:column;
-   align-items:center;
-   position:relative;
-  }
- 
- .menu-toggle{
-   display:block;
-   position:absolute;
-   right:16px;
-   top:24px;
-   }
-
-  nav ul{
-   display:none;
-   flex-direction:column;
-   width:100%;
-   background:white;
-   margin-top:16px;
-   padding:10px 0;
-  }
-
-  nav ul.show{
-    display:flex;
-    }
-  nav ul li{
-    text-align:center;
-    padding:6px 0;
-  }
-  nav span{
-   font-size:11px;
-  }
-  .dropdown-menu{
-    position:static;
-    border:none;
-    padding:5px 0;
-  }
-}
-/*Hamburger menu- ends here*/
-
-
-* {
-box-sizing: border-box;
+nav span {
+font-size: 11px;
 }
 
-
-.btn-small {
-display: inline-block;
-margin-top: 12px;
-padding: 8px 18px;
-background: #2f5d3a;
-color: #fff;
-text-decoration: none;
-border-radius: 4px;
-font-size:14px;
+.dropdown-menu {
+position: static;
+border: none;
+padding: 5px 0;
 }
+}
+
