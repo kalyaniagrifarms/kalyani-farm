@@ -90,6 +90,17 @@
     <span class="mr">🌿 हंगामी उत्पादने उपलब्ध – व्हॉट्सॲपवर प्री-ऑर्डर करा</span></p>
     <a href="https://wa.me/919004006370?text=Interested%20in%20Kalyani%20Farms%20seasonal%20produce" class="btn-small" onclick="trackWhatsApp()">Pre-Order Now</a>
 </section>
+
+  <!-- OFFER POPUP -->
+<div class="offer-popup" id="offerPopup" role="dialog" aria-modal="true">
+  <div class="offer-content">
+      <button class="offer-close" aria-label="Close offer">✕</button>
+      <h3 id="offerTitle"></h3>
+      <p id="offerText"></p>
+      <p class="mr" id="offerTextMr"></p>
+      <a href="https://wa.me/919004006370?text=Interested%20in%20Kalyani%20Farms%20seasonal%20produce" class="btn-small" onclick="trackWhatsApp()">Pre-Order Now</a>
+  </div>
+</div>
   
 <footer>
     <img src="images/logo.png" class="footer-logo">
@@ -118,6 +129,99 @@
            }
       }
    </script>
+  
+  <!----Offer popup JS------>
+  <script>
+    const popup = document.getElementById('offerPopup');
+    const closeBtn = document.querySelector('.offer-close');
+    
+    const title = document.getElementById('offerTitle');
+    const text = document.getElementById('offerText');
+    const textMr = document.getElementById('offerTextMr');
+    
+    const month = new Date().getMonth(); // 0 = Jan
+    
+    const seasonalOffers = {
+    0: { // Jan
+    title: "🌾 Red Rice & Turmeric Available",
+    text: "Naturally grown Walay red rice and turmeric now available.",
+    mr: "🌾 वालई तांदूळ व हळद उपलब्ध"
+    },
+    1: { // Feb
+    title: "🌶️ Black Pepper Harvest",
+    text: "Fresh Konkan black pepper – limited stock.",
+    mr: "🌶️ कोकणातील ताजी काळी मिरी"
+    },
+    2: { // Mar
+    title: "🌿 Summer Farm Produce",
+    text: "Seasonal organic produce directly from our farm.",
+    mr: "🌿 शेतातून थेट सेंद्रिय उत्पादने"
+    },
+    3: { // Apr
+    title: "🥭 Mango Season Coming Soon",
+    text: "Pre-book Konkan mangoes early.",
+    mr: "🥭 कोकणातील आंब्यांची आगाऊ नोंदणी"
+    },
+    4: { // May
+    title: "🥭 Mango Pre-Orders Open",
+    text: "Naturally ripened Konkan mangoes.",
+    mr: "🥭 नैसर्गिक पद्धतीने पिकलेले कोकणातील आंबे"
+    },
+    5: { // Jun
+    title: "🌧️ Monsoon Farming Begins",
+    text: "Support sustainable monsoon crops.",
+    mr: "🌧️ पावसाळी शेतीस सुरुवात"
+    },
+    6: { // Jul
+    title: "🌱 Organic Turmeric Growing",
+    text: "Turmeric crop growing naturally on our farm.",
+    mr: "🌱 शेतात नैसर्गिक हळद वाढत आहे"
+    },
+    7: { // Aug
+    title: "🌿 Farm Fresh Updates",
+    text: "Follow our monsoon farming journey.",
+    mr: "🌿 पावसाळी शेतीचा प्रवास"
+    },
+    8: { // Sep
+    title: "🌾 Harvest Preparation",
+    text: "Preparing for upcoming harvest.",
+    mr: "🌾 कापणीची तयारी"
+    },
+    9: { // Oct
+    title: "🌶️ Pepper Processing",
+    text: "Black pepper processing in progress.",
+    mr: "🌶️ काळी मिरी प्रक्रिया सुरू"
+    },
+    10: { // Nov
+    title: "🌾 Fresh Harvest Ready",
+    text: "Season’s fresh organic produce available.",
+    mr: "🌾 हंगामातील ताजी सेंद्रिय उत्पादने"
+    },
+    11: { // Dec
+    title: "🎁 Festive Organic Gifts",
+    text: "Organic farm produce for festive gifting.",
+    mr: "🎁 सेंद्रिय उत्पादने – सणांसाठी उत्तम भेट"
+    }
+    };
+    
+    const offer = seasonalOffers[month];
+    
+    title.textContent = offer.title;
+    text.textContent = offer.text;
+    textMr.textContent = offer.mr;
+    
+    if (!localStorage.getItem('offerSeen')) {
+    setTimeout(() => {
+    popup.classList.add('show');
+    }, 1500);
+    }
+    
+    closeBtn.addEventListener('click', () => {
+    popup.classList.remove('show');
+    localStorage.setItem('offerSeen', 'yes');
+    });
+  </script>
+  
 </body>
 </html>
 
