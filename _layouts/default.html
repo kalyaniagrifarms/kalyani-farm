@@ -26,7 +26,11 @@
    
     <!----CSS----->
     <link rel="stylesheet" href="/css/style.css">
- 
+    
+    {%if page.hero_image%}
+     <link rel="preload" as="image" href="{{page.hero_image}}">
+    {%endif%}
+    
     <!---HTML Tag Verification --->
    <meta name="google-site-verification" content="oHyODE_AT_qSG7ZUIO3RFROHWmJf36PUzCNk_H93kqg" />
 </head>
