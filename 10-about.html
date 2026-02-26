@@ -1,64 +1,9 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>About Us | Kalyani Farms</title>
-   
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2G3R75TJNG"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2G3R75TJNG');
-  </script>
-  
-   <!---SEO basics--------->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="Kalyani Farms, Organic & Sustainable Farm in Konkan, Naturally grown products,Natural & Traditional farming,preserving biodiversity">
-  <meta name="author" content="Kalyani Farms">
-  <meta name="description" content="Kalyani Farms is an organic and sustainable farm in Konkan (Sindhudurg), offering naturally grown red rice, turmeric, black pepper, and seasonal produce.">  
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">  
-   
-  <!----CSS----->
-  <link rel="stylesheet" href="css/style.css">
-  
-  <!---HTML Tag Verification --->
-  <meta name="google-site-verification" content="oHyODE_AT_qSG7ZUIO3RFROHWmJf36PUzCNk_H93kqg" />
- </head>
-<body>
-
-<!----Menu list on header starts here--->
-<header>
-  <div class="container nav">
-    <img src="images/logo.png" alt="Kalyani Farms Logo" class="logo">
-    <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home<br><span>मुख्य पृष्ठ</span></a></li>
-        <li class="dropdown">
-          <a href="10-about.html">About<br><span>आमच्याबद्दल</span></a>
-          <ul class="dropdown-menu">
-            <li><a href="11-about-biodiversity.html">Biodiversity & Sustainability<br><span>जैवविविधता व शाश्वत शेती</span></a></li>
-          </ul>
-        </li>
-        <li><a href="20-products.html">Products<br><span>उत्पादने</span></a></li>
-        <li><a href="21-activities.html">Activities<br><span>क्रियाकलाप</span></a></li>
-        <li><a href="22-blog.html">Blog<br><span>ब्लॉग</span></a></li>
-        <li><a href="24-seasonal-calendar.html">Seasonal Calendar<br><span>हंगामी माहिती</span></a></li>
-        <li><a href="30-gallery.html">Gallery<br><span>गॅलरी</span></a></li>
-        <li><a href="40-faq.html">FAQ<br><span>सामान्य प्रश्न</span></a></li>
-        <li><a href="50-contact.html">Contact<br><span>संपर्क</span></a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
+---
+layout: default
+title: "About Us | Kalyani Farms"
+keywords: "Kalyani Farms, Organic & Sustainable Farm in Konkan, Naturally grown products,Natural & Traditional farming,preserving biodiversity"
+description: "Kalyani Farms is an organic and sustainable farm in Konkan (Sindhudurg), offering naturally grown red rice, turmeric, black pepper, and seasonal produce."
+---
 
 <section class="section">
   <h2>Our Story</h2>
@@ -73,13 +18,7 @@
   <a class="btn-outline" href="11-about-biodiversity.html">Biodiversity & Sustainability →</a>
 </section>
 
-<footer>
-  <img src="images/logo.png" class="footer-logo">
-  <p>Good for nature! Good for you!</p>
-  <p class="mr">निसर्गासाठी चांगले | तुमच्यासाठी उत्तम</p>
-  <p>© Kalyani Farms | Kudal, Sindhudurg, Maharashtra</p>
-</footer>
- <!---Hamburger menu JS--->
+<!---Hamburger menu JS--->
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('nav ul');
