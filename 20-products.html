@@ -8,85 +8,44 @@ description: "Kalyani Farms is an organic and sustainable farm in Konkan (Sindhu
 <h2>Our Organic Collection</h2>
 
 <div class="premium-products">
-
-<!-- RED RICE -->
+{% assign products = site.data.products %}
+{% for product in products %}
 <div class="premium-card">
 <div class="premium-header">
-<img src="/images/products/red-rice.jpg" alt="Organic Red Rice">
+<img src="{{ product.image | relative_url }}" alt="{{ product.name }}">
 <div class="premium-info">
-<h3>🌾 Red Rice (Walay)</h3>
-<p>Naturally grown in Konkan using traditional methods.</p>
-<p class="mr">कोकणात पारंपरिक पद्धतीने पिकवलेला वालई तांदूळ</p>
+<h3>{{ product.icon }} {{ product.name }}</h3>
+<p>{{ product.description }}</p>
+<p class="mr">{{ product.description_mr }}</p>
+
+<a href="https://wa.me/919004006370?text={{ product.whatsapp_text | url_encode }}"
+class="btn-small"
+onclick="trackWhatsApp()">
+Order Main Product
+</a>
+
 <button class="premium-toggle">View Collection ↓</button>
 </div>
 </div>
 
 <div class="premium-children">
+{% for child in product.derived_products %}
 <div class="derived-card">
-<h4>Hand pounded Rice</h4>
-<p class="mr">हातसडीचा तांदूळ</p>
-<a href="https://wa.me/919004006370?text=Interested%20in%20Organic%20Red%20Rice%20from%20Kalyani%20Farms" class="btn-small" onclick="trackWhatsApp()">Order on WhatsApp</a>
-</div>
-</div>
+<img src="{{ child.image | relative_url }}" alt="{{ child.name }}">
+<h4>{{ child.name }}</h4>
+<p class="mr">{{ child.name_mr }}</p>
 
-<div class="premium-children">
-<div class="derived-card">
-<h4>Parboiled Rice</h4>
-<p class="mr">उकडा तांदूळ</p>
-<a href="https://wa.me/919004006370?text=Interested%20in%20Organic%20Red%20Rice%20from%20Kalyani%20Farms" class="btn-small" onclick="trackWhatsApp()">Order on WhatsApp</a>
+<a href="https://wa.me/919004006370?text={{ child.whatsapp_text | url_encode }}"
+class="btn-small"
+onclick="trackWhatsApp()">
+Order on WhatsApp
+</a>
 </div>
-</div>
-
-<div class="premium-children">
-<div class="derived-card">
-<h4> Rice Tukda</h4>
-<p class="mr">तांदूळ तुकडा</p>
-<a href="https://wa.me/919004006370?text=Interested%20in%20Organic%20Red%20Rice%20from%20Kalyani%20Farms" class="btn-small" onclick="trackWhatsApp()">Order on WhatsApp</a>
-</div>
-</div>
-
-<div class="premium-children">
-<div class="derived-card">
-<h4> Rice flakes</h4>
-<p class="mr">तांदूळ पोहे</p>
-<a href="https://wa.me/919004006370?text=Interested%20in%20Organic%20Red%20Rice%20from%20Kalyani%20Farms" class="btn-small" onclick="trackWhatsApp()">Order on WhatsApp</a>
-</div>
-</div>
-
-<div class="premium-children">
-<div class="derived-card">
-<h4> Rice Flour(for Bhakri &/or Modak)</h4>
-<p class="mr">तांदूळ पीठ</p>
-<a href="https://wa.me/919004006370?text=Interested%20in%20Organic%20Red%20Rice%20from%20Kalyani%20Farms" class="btn-small" onclick="trackWhatsApp()">Order on WhatsApp</a>
-</div>
-</div>
-  
-</div>
-
-
-<!-- TURMERIC -->
-<div class="premium-card">
-
-<div class="premium-header">
-<img src="images/products/turmeric.jpg" alt="Organic Turmeric">
-<div class="premium-info">
-<h3>🌿 Turmeric</h3>
-<p>Sun-dried, chemical-free turmeric roots.</p>
-<p class="mr">नैसर्गिक पद्धतीने सुकवलेली सेंद्रिय हळद</p>
-<button class="premium-toggle">View Collection ↓</button>
-</div>
-</div>
-
-<div class="premium-children">
-<div class="derived-card">
-<h4>Turmeric Powder</h4>
-<p class="mr">हळद पावडर</p>
-<a href="https://wa.me/919004006370?text=Interested%20in%20Organic%20Turmeric%20Powder%20from%20Kalyani%20Farms" class="btn-small" onclick="trackWhatsApp()">Order on WhatsApp</a>
-</div>
+{% endfor %}
 </div>
 
 </div>
-
+{% endfor %}
 </div>
 </section>
 
@@ -101,14 +60,15 @@ description: "Kalyani Farms is an organic and sustainable farm in Konkan (Sindhu
 
 <!---New toggle for collaspible product tree---->
 <script>
-    document.querySelectorAll('.premium-toggle').forEach(button => {
-    button.addEventListener('click', () => {
-    const section = button.closest('.premium-card');
-    const children = section.querySelector('.premium-children');
-    children.classList.toggle('show');
-       });
-   });
+  document.querySelectorAll('.premium-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+            const card = button.closest('.premium-card');
+            const children = card.querySelector('.premium-children');
+            children.classList.toggle('show');
+          });
+      });
 </script>
+
  <!---Hamburger menu JS--->
   <script>
     const toggle = document.querySelector('.menu-toggle');
