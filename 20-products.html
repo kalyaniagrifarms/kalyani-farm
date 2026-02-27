@@ -25,7 +25,7 @@ description: "Kalyani Farms is an organic and sustainable farm in Konkan (Sindhu
 <div class="derived-card">
 <h4>Rice Flour</h4>
 <p class="mr">तांदूळ पीठ</p>
-<a href="https://wa.me/919004006370" class="btn-small">Order Now</a>
+<a href="https://wa.me/919004006370?text=Interested%20in%20Organic%20Red%20Rice%20from%20Kalyani%20Farms" class="btn-small" onclick="trackWhatsApp()">Order on WhatsApp</a>
 </div>
 </div>
 
@@ -49,7 +49,7 @@ description: "Kalyani Farms is an organic and sustainable farm in Konkan (Sindhu
 <div class="derived-card">
 <h4>Turmeric Powder</h4>
 <p class="mr">हळद पावडर</p>
-<a href="https://wa.me/919004006370" class="btn-small">Order Now</a>
+<a href="https://wa.me/919004006370?text=Interested%20in%20Organic%20Turmeric%20Powder%20from%20Kalyani%20Farms" class="btn-small" onclick="trackWhatsApp()">Order on WhatsApp</a>
 </div>
 </div>
 
@@ -200,5 +200,24 @@ description: "Kalyani Farms is an organic and sustainable farm in Konkan (Sindhu
        });
    });
 </script>
- 
+ <!---Hamburger menu JS--->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('nav ul');
+    toggle.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('show');
+    toggle.setAttribute('aria-expanded',isOpen);
+    });
+  </script>
+  
+ <!----whatsapp tracking--->
+  <script>
+   function trackWhatsApp() {
+      if (window.gtag) {
+            gtag('event', 'whatsapp_click', {
+            event_category: 'engagement',
+            event_label: 'Preorder Banner'});
+           }
+      }
+  </script> 
 
