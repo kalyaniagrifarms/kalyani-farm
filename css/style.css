@@ -401,10 +401,10 @@ gap: 30px;
 
 .premium-card {
 background: #fff;
-border-radius: 10px;
-box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-overflow: hidden;
-transition: transform 0.3s ease;
+border-radius: 14px;
+padding: 30px;
+margin-bottom: 50px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .premium-card:hover {
@@ -413,23 +413,22 @@ transform: translateY(-4px);
 
 .premium-header {
 display: flex;
-flex-wrap: wrap;
+gap: 30px;
+align-items: center;
 }
 
 .premium-header img {
-width: 300px;
-height: 100%;
-object-fit: cover;
+width: 250px;
+border-radius: 12px;
 }
 
 .premium-info {
 flex: 1;
-padding: 24px;
 }
 
 .premium-info h3 {
-margin-top: 0;
-color: #2f5d3a;
+margin-bottom: 10px;
+font-size: 26px;
 }
 
 .premium-toggle {
@@ -444,8 +443,6 @@ border-radius: 4px;
 .premium-children {
 display: none;
 margin-top: 30px;
-padding-top: 20px;
-border-top: 1px solid #eee;
 }
 
 .premium-children.show {
@@ -456,13 +453,11 @@ justify-content: center;
 }
 
 .derived-card {
-width: 180px;
-padding: 15px;
-background: #fff;
+width: 200px;
+padding: 20px;
+background: #f9f9f9;
 border-radius: 12px;
-box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 text-align: center;
-transition: 0.3s ease;
 }
 
 .derived-card img {
