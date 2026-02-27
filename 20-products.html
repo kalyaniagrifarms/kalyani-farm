@@ -4,6 +4,61 @@ title: "Products | Kalyani Farms"
 keywords: "Kalyani Farms, Organic & Sustainable Farm in Konkan, Naturally grown products, Organic Red Rice(Walay),Turmeric, Black Pepper"
 description: "Kalyani Farms is an organic and sustainable farm in Konkan (Sindhudurg), offering naturally grown red rice, turmeric, black pepper, and seasonal produce."
 ---
+<section class="section">
+<h2>Our Organic Collection</h2>
+
+<div class="premium-products">
+
+<!-- RED RICE -->
+<div class="premium-card">
+<div class="premium-header">
+<img src="images/products/red-rice.jpg" alt="Organic Red Rice">
+<div class="premium-info">
+<h3>🌾 Red Rice (Walay)</h3>
+<p>Naturally grown in Konkan using traditional methods.</p>
+<p class="mr">कोकणात पारंपरिक पद्धतीने पिकवलेला वालई तांदूळ</p>
+<button class="premium-toggle">View Collection ↓</button>
+</div>
+</div>
+
+<div class="premium-children">
+<div class="derived-card">
+<h4>Rice Flour</h4>
+<p class="mr">तांदूळ पीठ</p>
+<a href="https://wa.me/919004006370" class="btn-small">Order Now</a>
+</div>
+</div>
+
+</div>
+
+
+<!-- TURMERIC -->
+<div class="premium-card">
+
+<div class="premium-header">
+<img src="images/products/turmeric.jpg" alt="Organic Turmeric">
+<div class="premium-info">
+<h3>🌿 Turmeric</h3>
+<p>Sun-dried, chemical-free turmeric roots.</p>
+<p class="mr">नैसर्गिक पद्धतीने सुकवलेली सेंद्रिय हळद</p>
+<button class="premium-toggle">View Collection ↓</button>
+</div>
+</div>
+
+<div class="premium-children">
+<div class="derived-card">
+<h4>Turmeric Powder</h4>
+<p class="mr">हळद पावडर</p>
+<a href="https://wa.me/919004006370" class="btn-small">Order Now</a>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
 
 <section class="section">
 <h2>Our Organic Products</h2>
@@ -133,6 +188,17 @@ description: "Kalyani Farms is an organic and sustainable farm in Konkan (Sindhu
   <p>🌿 Seasonal Produce Now Available – Pre-Order on WhatsApp<span class="mr">🌿 हंगामी उत्पादने उपलब्ध – व्हॉट्सॲपवर प्री-ऑर्डर करा</span></p>
   <a href="https://wa.me/919004006370?text=Interested%20in%20Kalyani%20Farms%20seasonal%20produce" class="btn-small" onclick="trackWhatsApp()">Pre-Order Now</a>
 </section>
-    
+
+
+<!---New toggle for collaspible product tree---->
+<script>
+    document.querySelectorAll('.premium-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+    const section = button.closest('.premium-card');
+    const children = section.querySelector('.premium-children');
+    children.classList.toggle('show');
+       });
+   });
+</script>
  
 
