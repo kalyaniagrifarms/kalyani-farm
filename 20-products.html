@@ -60,12 +60,14 @@ Order on WhatsApp
 
 <!---New toggle for collaspible product tree---->
 <script>
-  document.querySelectorAll('.premium-toggle').forEach(button => {
-        button.addEventListener('click', () => {
-            const card = button.closest('.premium-card');
-            const children = card.querySelector('.premium-children');
-            children.classList.toggle('show');
-          });
+  document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll('.premium-toggle').forEach(button => {
+              button.addEventListener('click', () => {
+                  const card = button.closest('.premium-card');
+                  const children = card.querySelector('.premium-children');
+                  children.classList.toggle('show');
+              });
+            });
       });
 </script>
 
