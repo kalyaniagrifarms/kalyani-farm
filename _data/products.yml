@@ -6,30 +6,30 @@ description_mr: "कोकणात पारंपरिक पद्धती�
 whatsapp_text: "Interested in Organic Red Rice from Kalyani Farms"
 
 derived_products:
--name: "Hand Pounded Rice"
-name_mr: "हातसडीचा तांदूळ"
-image: "/images/products/rice1.jpg"
-whatsapp_text: "Interested in Hand Pounded Rice"
-
--name: "Parboiled Rice"
-name_mr: "उकडा तांदूळ"
-image: "/images/products/rice2.jpg"
-whatsapp_text: "Interested in Parboiled Rice"
-
--name: "Rice Tukda"
-name_mr: "तांदूळ तुकडा"
-image: "/images/products/rice3.jpg"
-whatsapp_text: "Interested in Rice Tukda"
-
--name: "Rice Flakes"
-name_mr: "तांदूळ पोहे"
-image: "/images/products/rice4.jpg"
-whatsapp_text: "Interested in Rice Flakes"
-
--name: "Rice Flour"
-name_mr: "तांदूळ पीठ"
-image: "/images/products/rice5.jpg"
-whatsapp_text: "Interested in Rice Flour"
+  -name: "Hand Pounded Rice"
+   name_mr: "हातसडीचा तांदूळ"
+   image: "/images/products/rice1.jpg"
+   whatsapp_text: "Interested in Hand Pounded Rice"
+  
+  -name: "Parboiled Rice"
+   name_mr: "उकडा तांदूळ"
+   image: "/images/products/rice2.jpg"
+   whatsapp_text: "Interested in Parboiled Rice"
+  
+  -name: "Rice Tukda"
+   name_mr: "तांदूळ तुकडा"
+   image: "/images/products/rice3.jpg"
+   whatsapp_text: "Interested in Rice Tukda"
+  
+  -name: "Rice Flakes"
+   name_mr: "तांदूळ पोहे"
+   image: "/images/products/rice4.jpg"
+   whatsapp_text: "Interested in Rice Flakes"
+  
+  -name: "Rice Flour"
+   name_mr: "तांदूळ पीठ"
+   image: "/images/products/rice5.jpg"
+   whatsapp_text: "Interested in Rice Flour"
 
 -name: "Turmeric"
 icon: "🌿"
@@ -39,8 +39,8 @@ description_mr: "नैसर्गिक पद्धतीने सुकव�
 whatsapp_text: "Interested in Organic Turmeric"
 
 derived_products:
--name: "Turmeric Powder"
-name_mr: "हळद पावडर"
-image: "/images/products/turmeric-powder.jpg"
-whatsapp_text: "Interested in Turmeric Powder"
+  -name: "Turmeric Powder"
+  name_mr: "हळद पावडर"
+  image: "/images/products/turmeric-powder.jpg"
+  whatsapp_text: "Interested in Turmeric Powder"
 
